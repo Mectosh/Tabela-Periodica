@@ -1,8 +1,9 @@
 let Grupo;
 let Periodo;
-let NumeroDoElemento;
+
 let a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18;
 let p1, p2, p3, p4, p5, p6, p7;
+
 a1 = 1;
 a2 = 2;
 a3 = 3;
@@ -27,11 +28,18 @@ p3 = 3;
 p4 = 4;
 p5 = 5;
 p6 = 6;
-p7 = 7;
-grupo = Number(prompt("digite o grupo da tabela periodica:"));
-periodo = Number(prompt("digite o periodo da tabela periodica:"));
-if (grupo > 18 || periodo > 7) {
+p7 = 7; 
+
+while(true) {
+    grupo = Number(prompt("digite o grupo da tabela periodica:"));
+    periodo = Number(prompt("digite o periodo da tabela periodica:"));
+if (grupo == 0) {
+    break;
+} else if (isNaN(grupo) || isNaN(periodo)) {
+    console.log("so numeros sao permitidos!")
+} else if (grupo > 18 || periodo > 7) {
     console.log("So existem 18 grupos e 7 periodos respectivamente!");
+
 } else if (grupo == a1 && periodo == p1) {
     console.log("O elemento e o Hidrogênio!");
 } else if (grupo == a1 && periodo == p2) {
@@ -218,5 +226,6 @@ else if (grupo == a3 && periodo == p6) {
     console.log("O elemento e o Radônio!");
 } else if (grupo == a18 && periodo == p7) {
     console.log("O elemento e o Oganessônio!");
+} 
 }
 // Codando hoje para construir o amanhã. - MecTosh 
